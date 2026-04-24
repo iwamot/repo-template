@@ -34,4 +34,4 @@ After clicking **Use this template**:
 6. **Extend `validate.sh`** with repo-specific lint (e.g. `mise run docker-lint Dockerfile`, language linters).
 7. **Review `mise.toml`'s `min_version`**: the template provides a default, but the minimum mise version is each repository's own decision. Bump it if your tasks require a newer feature, or drop it if no constraint is needed. This is *not* auto-bumped by Renovate.
 
-The first Renovate run will bump pinned versions in `.github/workflows/*.yml` and `mise.toml`'s `task_config.includes` to current.
+Renovate runs on this template to keep pinned versions in `.github/workflows/*.yml` and `mise.toml`'s `task_config.includes` reasonably current, but derived repositories are responsible for their own updates going forward — enable Renovate and let it track upstream from there.
