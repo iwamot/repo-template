@@ -15,6 +15,7 @@ Starter template for repositories in iwamot's ecosystem.
 | `.github/workflows/dependabot-auto-merge.yml` | Auto-merges Dependabot PRs. |
 | `mise.toml` | Pins mise minimum version and includes shared tasks from `iwamot/mise-tasks`. |
 | `validate.sh` | Lint entry point invoked by `iwamot/actions/mise-validate`. Add repo-specific lint at the marked location. |
+| `SECURITY.md` | Minimal security policy. Directs vulnerability reports to GitHub Security Advisories. |
 
 ## Post-creation setup
 
