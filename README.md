@@ -26,8 +26,8 @@ After clicking **Use this template**:
    - [DCO](https://github.com/apps/dco) — sign-off enforcement
    - Renovate App (or your self-hosted equivalent)
 3. **Create a GitHub Environment** for Renovate (default name: `production`, override via the `environment` input on `renovate.yml` if needed) and add environment-scoped secrets:
-   - `RENOVATE_APP_ID`
-   - `RENOVATE_PRIVATE_KEY`
+   - `RENOVATE_APP_CLIENT_ID`
+   - `RENOVATE_APP_PRIVATE_KEY`
 4. **Add a publish workflow** if the repo ships artifacts. These also take an `environment` input — create additional environments as needed:
    - `iwamot/workflows/.github/workflows/publish-ghcr.yml` for GHCR
    - `iwamot/workflows/.github/workflows/publish-ecr-public.yml` for ECR Public
