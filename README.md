@@ -28,9 +28,10 @@ After clicking **Use this template**:
 3. **Create a GitHub Environment** for Renovate (default name: `production`, override via the `environment` input on `renovate.yml` if needed) and add environment-scoped secrets:
    - `RENOVATE_APP_CLIENT_ID`
    - `RENOVATE_APP_PRIVATE_KEY`
-4. **Add a publish workflow** if the repo ships artifacts. These also take an `environment` input — create additional environments as needed:
-   - `iwamot/workflows/.github/workflows/publish-ghcr.yml` for GHCR
-   - `iwamot/workflows/.github/workflows/publish-ecr-public.yml` for ECR Public
+4. **Add a release workflow** if the repo ships artifacts. These also take an `environment` input — create additional environments as needed:
+   - `iwamot/workflows/.github/workflows/release-ghcr.yml` for GHCR
+   - `iwamot/workflows/.github/workflows/release-ecr-public.yml` for ECR Public
+   - `iwamot/workflows/.github/workflows/release-homebrew-tap.yml` for Homebrew tap
 5. **Add language-specific files** as needed: `Dockerfile`, `package.json`, `pyproject.toml`, `.gitignore`, etc.
 6. **Extend `validate.sh`** with repo-specific lint (e.g. `mise run docker-lint Dockerfile`, language linters).
 7. **Review `mise.toml`'s `min_version`**: the template provides a default, but the minimum mise version is each repository's own decision. Bump it if your tasks require a newer feature, or drop it if no constraint is needed. This is *not* auto-bumped by Renovate.
