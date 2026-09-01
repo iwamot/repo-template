@@ -15,7 +15,7 @@ Starter template for repositories in iwamot's ecosystem.
 | `.github/workflows/dependency-review.yml` | Vulnerability and license review on PRs. |
 | `.github/workflows/oide.yml` | Pulls the files listed in `.github/Oidefile` from this template. See [Staying in sync](#staying-in-sync). |
 | `.github/workflows/release.yml` | Creates a GitHub Release when a `v*` tag is pushed. |
-| `.github/workflows/renovate.yml` | Self-hosted Renovate runner (hourly + on push to main). |
+| `.github/workflows/renovate.yml` | Self-hosted Renovate runner (every 6 hours + on push to main). |
 | `.github/workflows/validate.yml` | Runs `validate.sh` on push and PR via `iwamot/workflows`. |
 | `CONTRIBUTING.md` | Contribution guide: local setup, DCO, and Conventional Commits. |
 | `LICENSE` | Project license. |
